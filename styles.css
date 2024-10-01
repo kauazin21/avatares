@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+header input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+section {
+    flex: 1;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.avatares-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.avatar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.avatar-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.avatar-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.avatar-item button {
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.avatar-item button:hover {
+    background-color: #0056b3;
+}
+
+.avatar-item:hover {
+    transform: scale(1.05);
+}
+
+#lista-favoritos, #lista-avatares {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#detalhes-avatares-section {
+    flex: 0.5;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+#detalhes-avatares img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#detalhes-avatares p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    section {
+        margin-bottom: 0;
+    }
+
+    header input[type="text"] {
+        max-width: 400px;
+    }
+
+    #lista-avatares-section, #favoritos-section {
+        flex: 1;
+    }
+    
+    #detalhes-avatares-section {
+        flex: 0.5;
+    }
+}
